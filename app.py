@@ -66,6 +66,7 @@ def suggest_meal(tdee):
     # Chọn thực phẩm cho từng bữa ăn sao cho tổng calo gần bằng TDEE và có ít nhất 3 món mỗi bữa
     for meal_time in meal_plan:
         meal_items = foods[meal_time]
+        random.shuffle(meal_items)
         meal_count = 0  # Đếm số món ăn trong bữa
         for item in meal_items:
             if total_calories + item['calories'] <= tdee and meal_count < 2:  # Đảm bảo không vượt quá TDEE và có ít nhất 3 món
