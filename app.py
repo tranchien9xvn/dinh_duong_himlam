@@ -85,6 +85,15 @@ def suggest_meal(tdee):
                 total_calories += additional_item['calories']
                 total_cost += additional_item['price']
                 meal_count += 1
+    while total_calories < tdee:
+        meal_time = random.choice(['breakfast', 'lunch', 'dinner'])
+        meal_items = foods[meal_time]
+        additional_item = random.choice(meal_items)
+        if additional_item not in meal_plan[meal_time]:  # Đảm bảo không trùng món
+            meal_plan[meal_time].append(additional_item)
+            total_calories += additional_item['calories']
+            total_cost += additional_item['price']
+            meal_count += 1
 
     return meal_plan, total_cost, total_calories
 
