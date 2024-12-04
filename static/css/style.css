@@ -1,0 +1,138 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    padding: 20px;
+    background-image: url('/static/images/home.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;  /* Để lớp phủ có thể chồng lên ảnh */
+  }
+
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.1); /* Lớp phủ sáng trắng với độ trong suốt */
+    z-index: -1; /* Đảm bảo lớp phủ ở trên ảnh nền */
+  }
+  
+  
+  
+  header {
+    display: flex;
+    align-items: center;  /* Căn giữa theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 10px;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-left: 20px;  /* Khoảng cách giữa logo và tiêu đề */
+  }
+  
+  .logo {
+    width: 300px;  /* Kích thước của logo */
+    height: auto;
+    margin-right: 20px;  /* Khoảng cách giữa logo và tiêu đề */
+  }
+  
+  
+  form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  form label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  form input, form select, form button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  form button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #45a049;
+  }
+  
+  main {
+    margin-top: 20px;
+  }
+  
+  h3, h4, h5 {
+    margin-bottom: 10px;
+  }
+
+  h3, h4, h5,p {
+    color: white; /* Chuyển màu chữ thành trắng */
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  li {
+    padding: 10px;
+    background-color: #fff;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    color: #777;
+  }
+  
+  img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Hình ảnh món ăn */
+  .food-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .food-item img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+  
